@@ -9,4 +9,8 @@ COPY . ./
 RUN yarn run build
 
 FROM nginx 
-COPY --from=builder /usr/src/app/public /usr/share/nginx/html
+
+WORKDIR /usr/share/nginx/html
+COPY --from=builder /usr/src/app/public .
+COPY --from=builder /usr/src/app/static .
+RUN chmod -R 0755 .
