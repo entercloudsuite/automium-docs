@@ -40,7 +40,7 @@ class Index extends React.Component {
 export default Index;
 
 const IndexHeadContainer = styled.div`
-  background: ${props => props.theme.brand};
+  background: linear-gradient(to bottom right,#5B53FF,#FF375C);
   padding: ${props => props.theme.sitePadding};
   text-align: center;
 `
