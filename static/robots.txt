@@ -1,0 +1,3 @@
+User-agent: *
+
+sitemap: https://automium.entercloudsuite.com/sitemap.xml
