@@ -26,10 +26,10 @@ class Index extends React.Component {
           </IndexHeadContainer>
           <BodyContainer>
             <p>The following sections help you learn how Automium works:</p>
-            <CtaButton to={'/my-infrastructure'}>My Infrastructure</CtaButton>
-            <CtaButton to={'/my-applications'}>My Applications</CtaButton>
-            <CtaButton to={'/service'}>Explore Services</CtaButton>
-            <CtaButton to={'/role-management'}>Admin</CtaButton>
+            <CtaButton to={'concepts/my-infrastructure'}>My Infrastructure</CtaButton>
+            <CtaButton to={'concepts/my-applications'}>My Applications</CtaButton>
+            <CtaButton to={'concepts/service'}>Explore Services</CtaButton>
+            <CtaButton to={'concepts/role-management'}>Admin</CtaButton>
           </BodyContainer>
         </main>
       </div>

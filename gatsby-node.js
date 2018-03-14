@@ -27,6 +27,7 @@ exports.onCreateNode = ({node, boundActionCreators, getNode}) => {
       slug = `/${parsedFilePath.dir}/`;
     }
     createNodeField({node, name: "slug", value: slug});
+    createNodeField({node, name: "path", value: parsedFilePath.dir});
   }
 };
 
@@ -44,6 +45,7 @@ exports.createPages = ({graphql, boundActionCreators}) => {
               node {
                 fields {
                   slug
+                  path
                 }
               }
             }
@@ -57,14 +59,16 @@ exports.createPages = ({graphql, boundActionCreators}) => {
           reject(result.errors);
         }
 
-        result.data.allMarkdownRemark.edges.forEach(edge => {        
-          createPage({
-            path: edge.node.fields.slug,
-            component: conceptPage,
-            context: {
-              slug: edge.node.fields.slug
-            }
-          })   
+        result.data.allMarkdownRemark.edges.forEach(edge => {
+          if (edge.node.fields.path === 'concepts') {       
+            createPage({
+              path: "concepts" + edge.node.fields.slug,
+              component: conceptPage,
+              context: {
+                slug: edge.node.fields.slug
+              }
+            })  
+          } 
         })
 
       })

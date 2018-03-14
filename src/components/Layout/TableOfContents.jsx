@@ -16,7 +16,8 @@ class TableOfContents extends React.Component {
         title: post.node.frontmatter.title,
         path: post.node.fields.slug,
         lessonNumber: post.node.frontmatter.lesson,
-        chapter: post.node.frontmatter.chapter
+        chapter: post.node.frontmatter.chapter,
+        type: type
       }
       postNodes.push(postNode)
     })
@@ -43,9 +44,10 @@ class TableOfContents extends React.Component {
     postNodeChapters.forEach((chapter, idx) => {
       const chapterItems = []
       chapter.forEach(node => {
+        let path = "/" + node.type + node.path
         chapterItems.push(
           <LessonContainer>
-            <Link to={node.path}>
+            <Link to={path}>
               <li>
                 <span>
                   <p>{node.chapter}.{node.lessonNumber} &nbsp;</p>
