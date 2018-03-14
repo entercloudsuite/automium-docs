@@ -21,7 +21,7 @@ class Index extends React.Component {
             <Hero>
               <img src={config.siteLogo} width='150px' />
               <h1>{config.siteTitle}</h1>
-              <h4>{config.siteDescription}</h4>
+              <h4>Learn how to deploy and manage your cloud<br/>infrastructure with <u>Automium</u> and <u>Enter Cloud Suite</u>.</h4>
             </Hero>
           </IndexHeadContainer>
           <BodyContainer>
