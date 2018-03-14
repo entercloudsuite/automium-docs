@@ -9,7 +9,6 @@ import styled from 'styled-components'
 class TableOfContents extends React.Component {
   buildNodes() {
     const {posts} = this.props
-    const type = this.props.contentsType
     const postNodes = []
     posts.forEach(post => {
       const postNode = {
@@ -17,7 +16,7 @@ class TableOfContents extends React.Component {
         path: post.node.fields.slug,
         lessonNumber: post.node.frontmatter.lesson,
         chapter: post.node.frontmatter.chapter,
-        type: type
+        type: this.props.contentsType
       }
       postNodes.push(postNode)
     })
