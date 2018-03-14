@@ -8,7 +8,7 @@ date: "13/03/2018"
 
 The first step to use Automium is to define the infrastructure needed to run your own application stack.
 
-It is possibile to use all kinds of resources commonly found in a Cloud enviroment, like: instances (virtual machines), volumes, security groups, public IPs.  
+It is possibile to use all kinds of resources commonly found in a Cloud environment, like: instances (virtual machines), volumes, security groups, public IPs.  
 
 Once the initial configurations are added, Automium executes a plan of creation or destruction based on the status of the infrastructure, only adding what's missing and removing what's in excess.
 

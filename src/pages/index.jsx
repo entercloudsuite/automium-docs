@@ -28,7 +28,7 @@ class Index extends React.Component {
             <p>The following sections help you learn how Automium works:</p>
             <CtaButton to={'/my-infrastructure'}>My Infrastructure</CtaButton>
             <CtaButton to={'/my-applications'}>My Applications</CtaButton>
-            <CtaButton to={'/explore'}>Explore Services</CtaButton>
+            <CtaButton to={'/service'}>Explore Services</CtaButton>
             <CtaButton to={'/role-management'}>Admin</CtaButton>
           </BodyContainer>
         </main>
