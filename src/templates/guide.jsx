@@ -7,9 +7,9 @@ import SiteHeader from '../components/Layout/Header'
 import config from "../../data/SiteConfig"
 import TableOfContents from "../components/Layout/TableOfContents";
 
-export default class ConceptTemplate extends React.Component {
+export default class GuideTemplate extends React.Component {
   render() {
-    const chapters = ["", "INFRASTRUCTURE", "APPLICATIONS", "SERVICES", "ADMIN"]
+    const chapters = ["", "DEMO"]
     const { slug } = this.props.pathContext;
     const postNode = this.props.data.postBySlug;
     const post = postNode.frontmatter;
@@ -29,7 +29,7 @@ export default class ConceptTemplate extends React.Component {
           <ToCContainer>
             <TableOfContents
               posts={this.props.data.allPostTitles.edges}
-              contentsType="concepts"
+              contentsType="guides"
               chapterTitles={chapters}
             />
           </ToCContainer>
@@ -103,7 +103,7 @@ const ToCContainer = styled.div`
 
 /* eslint no-undef: "off"*/
 export const pageQuery = graphql`
-  query ConceptBySlug($slug: String!) {
+  query GuidesBySlug($slug: String!) {
     allPostTitles: allMarkdownRemark{
         edges {
           node {

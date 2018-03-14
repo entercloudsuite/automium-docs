@@ -30,6 +30,7 @@ class Index extends React.Component {
             <CtaButton to={'concepts/my-applications'}>My Applications</CtaButton>
             <CtaButton to={'concepts/service'}>Explore Services</CtaButton>
             <CtaButton to={'concepts/role-management'}>Admin</CtaButton>
+            <p>Jump to the <a href="guides/getting-started">Getting Started Guide</a> if you are ready to try Automium!</p>
           </BodyContainer>
         </main>
       </div>

@@ -11,14 +11,16 @@ class TableOfContents extends React.Component {
     const {posts} = this.props
     const postNodes = []
     posts.forEach(post => {
-      const postNode = {
-        title: post.node.frontmatter.title,
-        path: post.node.fields.slug,
-        lessonNumber: post.node.frontmatter.lesson,
-        chapter: post.node.frontmatter.chapter,
-        type: this.props.contentsType
+      if (post.node.fields.path === this.props.contentsType) {
+        const postNode = {
+          title: post.node.frontmatter.title,
+          path: post.node.fields.slug,
+          lessonNumber: post.node.frontmatter.lesson,
+          chapter: post.node.frontmatter.chapter,
+          type: this.props.contentsType
+        }
+        postNodes.push(postNode)
       }
-      postNodes.push(postNode)
     })
 
     const postNodeChapters = [];

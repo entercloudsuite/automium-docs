@@ -35,6 +35,7 @@ exports.createPages = ({graphql, boundActionCreators}) => {
   const {createPage} = boundActionCreators;
 
   return new Promise((resolve, reject) => {
+    const guidePage = path.resolve("src/templates/guide.jsx")
     const conceptPage = path.resolve("src/templates/concept.jsx")
     resolve(
       graphql(
@@ -68,7 +69,16 @@ exports.createPages = ({graphql, boundActionCreators}) => {
                 slug: edge.node.fields.slug
               }
             })  
-          } 
+          }
+          else if (edge.node.fields.path === 'guides') { 
+            createPage({
+              path: "guides" + edge.node.fields.slug,
+              component: guidePage,
+              context: {
+                slug: edge.node.fields.slug
+              }
+            })  
+          }  
         })
 
       })
