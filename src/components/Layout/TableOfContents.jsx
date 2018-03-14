@@ -41,9 +41,9 @@ class TableOfContents extends React.Component {
     const listItems = []
     const chapterTitles = this.props.chapterTitles
     postNodeChapters.forEach((chapter, idx) => {
-      const chapterLessons = []
+      const chapterItems = []
       chapter.forEach(node => {
-        chapterLessons.push(
+        chapterItems.push(
           <LessonContainer>
             <Link to={node.path}>
               <li>
@@ -62,7 +62,7 @@ class TableOfContents extends React.Component {
             {chapterTitles[idx].toUpperCase()}
           </h5>
           <ul className='chapterItems'>
-            {chapterLessons}
+            {chapterItems}
           </ul>
         </li>
       )

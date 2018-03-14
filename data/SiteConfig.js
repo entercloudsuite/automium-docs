@@ -1,5 +1,4 @@
 module.exports = {
-  lessonsDir: "lessons", // The name of the directory that contains lessons or docs.
   siteTitle: "The Automation Platform", // Site title.
   siteTitleAlt: "Automium Docs", // Alternative site title for SEO.
   siteLogo: "/logos/logo-1024.png", // Logo used for SEO and manifest.

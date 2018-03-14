@@ -34,7 +34,7 @@ exports.createPages = ({graphql, boundActionCreators}) => {
   const {createPage} = boundActionCreators;
 
   return new Promise((resolve, reject) => {
-    const lessonPage = path.resolve("src/templates/lesson.jsx")
+    const conceptPage = path.resolve("src/templates/concept.jsx")
     resolve(
       graphql(
         `
@@ -60,7 +60,7 @@ exports.createPages = ({graphql, boundActionCreators}) => {
         result.data.allMarkdownRemark.edges.forEach(edge => {        
           createPage({
             path: edge.node.fields.slug,
-            component: lessonPage,
+            component: conceptPage,
             context: {
               slug: edge.node.fields.slug
             }
