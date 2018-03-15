@@ -15,8 +15,6 @@ A task define an operation to be performed in the destination host, so for examp
 ```yaml
 - name: run postgres configuration
   become: true
-  become_method: sudo
-  become_user: root
   hosts: all
   vars:
     postgresql_users:

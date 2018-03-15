@@ -9,7 +9,7 @@ import TableOfContents from "../components/Layout/TableOfContents";
 
 export default class GuideTemplate extends React.Component {
   render() {
-    const chapters = ["", "DEMO"]
+    const chapters = ["", "GETTING STARTED"]
     const { slug } = this.props.pathContext;
     const postNode = this.props.data.postBySlug;
     const post = postNode.frontmatter;
