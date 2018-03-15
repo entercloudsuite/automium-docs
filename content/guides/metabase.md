@@ -48,4 +48,4 @@ spec:
 
 In the configuration, you can see that we are going to use PostgreSQL as the database for Metabase; this will allow us to scale Metabase. The database is already running, but instead of using its local IP address, our approach it's to use [Service Discovery](/concepts/service-discovery) using the FQDN "postgres.service.automium.consul". 
 
-It's now possible to publish our services on a dedicated [Load Balancer](haproxy).
+It's now possible to publish our services on a dedicated [Load Balancer](ha-proxy).
