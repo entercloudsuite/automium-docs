@@ -6,7 +6,7 @@ module.exports = {
   pathPrefix: "/", // Prefixes all links. For cases when deployed to example.github.io/gatsby-advanced-starter/.
   siteDescription: "Learn how to deploy and manage your cloud infrastructure with Automium and Enter Cloud Suite.", // Website description used for RSS feeds/meta description tag.
   siteRss: "/rss.xml", // Path to the RSS file.
-  googleAnalyticsID: "", // GA tracking ID.
+  googleAnalyticsID: "UA-116367803-1", // GA tracking ID.
   userName: "User", // Username to display in the author segment.
   // Links to social profiles/projects you want to display in the author segment/navigation bar.
   userLinks: [
