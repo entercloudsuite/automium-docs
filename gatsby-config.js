@@ -1,4 +1,10 @@
 const config = require("./data/SiteConfig");
+const fs = require('fs')
+const path = require('path')
+
+const fromJson = filePath => {
+  return fs.readFileSync(filePath, 'utf8')
+}
 
 const pathPrefix = config.pathPrefix === "/" ? "" : config.pathPrefix;
 
@@ -17,6 +23,18 @@ module.exports = {
     }
   },
   plugins: [
+    {
+      resolve: `gatsby-source-openapi-aggregate`,
+      options: {
+        specs: [
+          {
+            name: 'latest',
+            resolve: () =>
+              fromJson(path.resolve(__dirname, './data/swagger.json')),
+          }
+        ],
+      },
+    },
     "gatsby-plugin-react-helmet",
     "gatsby-plugin-styled-components",
     {

@@ -6,6 +6,9 @@ exports.onCreateNode = ({node, boundActionCreators, getNode}) => {
   const {createNodeField} = boundActionCreators;
   let slug;
   if (node.internal.type === "MarkdownRemark") {
+    if (!node.fileAbsolutePath) {
+      return
+    }
     const fileNode = getNode(node.parent);
     const parsedFilePath = path.parse(fileNode.relativePath);
     if (
@@ -35,6 +38,7 @@ exports.createPages = ({graphql, boundActionCreators}) => {
   const {createPage} = boundActionCreators;
 
   return new Promise((resolve, reject) => {
+    const apiPage = path.resolve("src/templates/api.jsx")
     const guidePage = path.resolve("src/templates/guide.jsx")
     const conceptPage = path.resolve("src/templates/concept.jsx")
     resolve(
@@ -51,6 +55,14 @@ exports.createPages = ({graphql, boundActionCreators}) => {
               }
             }
           }
+          allOpenApiSpec {
+            edges {
+              node {
+                id
+                name
+              }
+            }
+          }
         }
       `
       ).then(result => {
@@ -59,6 +71,16 @@ exports.createPages = ({graphql, boundActionCreators}) => {
           console.log(result.errors);
           reject(result.errors);
         }
+
+        result.data.allOpenApiSpec.edges.forEach(edge => {
+          createPage({
+            path: "api/" + edge.node.name,
+            component: apiPage,
+            context: {
+              id: edge.node.id
+            }
+          }) 
+        })
 
         result.data.allMarkdownRemark.edges.forEach(edge => {
           if (edge.node.fields.path === 'concepts') {       

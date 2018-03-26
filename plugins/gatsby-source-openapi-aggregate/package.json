@@ -1,0 +1,92 @@
+{
+  "_args": [
+    [
+      {
+        "raw": "gatsby-source-openapi-aggregate",
+        "scope": null,
+        "escapedName": "gatsby-source-openapi-aggregate",
+        "name": "gatsby-source-openapi-aggregate",
+        "rawSpec": "",
+        "spec": "latest",
+        "type": "tag"
+      },
+      "/Users/fminzoni/Documents/GitHub/automium-docs"
+    ]
+  ],
+  "_from": "gatsby-source-openapi-aggregate@latest",
+  "_id": "gatsby-source-openapi-aggregate@0.1.7",
+  "_inCache": true,
+  "_installable": true,
+  "_location": "/gatsby-source-openapi-aggregate",
+  "_nodeVersion": "8.9.0",
+  "_npmOperationalInternal": {
+    "host": "s3://npm-registry-packages",
+    "tmp": "tmp/gatsby-source-openapi-aggregate-0.1.7.tgz_1509573502737_0.18878488754853606"
+  },
+  "_npmUser": {
+    "name": "devdigital",
+    "email": "devdigital.cloud@gmail.com"
+  },
+  "_npmVersion": "5.5.1",
+  "_phantomChildren": {},
+  "_requested": {
+    "raw": "gatsby-source-openapi-aggregate",
+    "scope": null,
+    "escapedName": "gatsby-source-openapi-aggregate",
+    "name": "gatsby-source-openapi-aggregate",
+    "rawSpec": "",
+    "spec": "latest",
+    "type": "tag"
+  },
+  "_requiredBy": [
+    "#USER",
+    "/"
+  ],
+  "_resolved": "https://registry.npmjs.org/gatsby-source-openapi-aggregate/-/gatsby-source-openapi-aggregate-0.1.7.tgz",
+  "_shasum": "e67cfd2ffbc4c2acf33cac5eb97c524781b995fc",
+  "_shrinkwrap": null,
+  "_spec": "gatsby-source-openapi-aggregate",
+  "_where": "/Users/fminzoni/Documents/GitHub/automium-docs",
+  "author": {
+    "name": "DevDigital",
+    "email": "devdigital.cloud@gmail.com"
+  },
+  "dependencies": {
+    "babel-runtime": "6.26.0"
+  },
+  "description": "Gatsby source plugin for pulling data into Gatsby from Open API/Swagger specifications",
+  "devDependencies": {
+    "babel-cli": "6.26.0",
+    "cross-env": "5.0.5",
+    "standard-version": "4.2.0"
+  },
+  "directories": {},
+  "dist": {
+    "integrity": "sha512-4Z2kGreuXADmi864kG9+e4h3lkWbhIHgWA2F3gfiueAGR6yG+xQxRWIkE6H6x9wAH4v49cBO7Oj+1v7C4uMHRQ==",
+    "shasum": "e67cfd2ffbc4c2acf33cac5eb97c524781b995fc",
+    "tarball": "https://registry.npmjs.org/gatsby-source-openapi-aggregate/-/gatsby-source-openapi-aggregate-0.1.7.tgz"
+  },
+  "gitHead": "58104b296f2d5dd22af4546a248fdd6e83111474",
+  "keywords": [
+    "gatsby",
+    "gatsby-plugin",
+    "gatsby-source-plugin"
+  ],
+  "license": "MIT",
+  "maintainers": [
+    {
+      "name": "devdigital",
+      "email": "devdigital.cloud@gmail.com"
+    }
+  ],
+  "name": "gatsby-source-openapi-aggregate",
+  "optionalDependencies": {},
+  "readme": "ERROR: No README data found!",
+  "scripts": {
+    "build": "babel ./sample/plugins/gatsby-source-openapi-aggregate --out-dir . --ignore __tests__",
+    "release": "standard-version",
+    "test": "echo No tests specified",
+    "watch": "babel ./sample/plugins/gatsby-source-openapi-aggregate -w . --out-dir . --ignore __tests__"
+  },
+  "version": "0.1.7"
+}
