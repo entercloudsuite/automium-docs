@@ -6,7 +6,7 @@ cover: ""
 date: "14/03/2018"
 ---
 
-In Automium, the [Application](/concepts/application) is the standard way to  deploy the configurations. 
+In Automium, the [Application](/concepts/application) is the standard way to  deploy configurations. 
 
 From the **My Applications** section, you can create a new Application. A unique name and a target are mandatory.
 A target, should be clear looking at the prepopulated list, could be one of the deployed service, such as "POSTGRES". 
