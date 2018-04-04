@@ -46,4 +46,4 @@ Once you have loaded the rules in the Prometheus server, customize the Ansible R
 
 Run once more a **Deploy** of the application to update the configuration.
 
-Thanks for following this guide, now you are ready to monitor all your infrastructure and receive notification if any component is at fault!
+Now you are ready to monitor all the infrastructure and receive notification if any component is at fault. [Follow the guide](grafana) to install a beautiful dashboard to understand your metrics!
