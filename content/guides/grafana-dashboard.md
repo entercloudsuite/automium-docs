@@ -8,7 +8,7 @@ date: "05/04/2018"
 
 Grafana makes it easy to construct queries with a **Query Editor** specific for the **Data Source** (i.e Prometheus) you need to use. 
 
-Start adding a new data source for Prometheus follow the Grafana [documentation](http://docs.grafana.org/features/datasources/prometheus/). Use the URL: `http://prometheus.service.automium.consul:9090` and Save the configuration.
+Start adding a new data source for Prometheus following the Grafana [documentation](http://docs.grafana.org/features/datasources/prometheus/). Use the URL: `http://prometheus.service.automium.consul:9090` and Save the configuration.
 
 Grafana will visualize queries in real time in one or more **Panels**. Dashboards are composed of individual panels arranged on a grid.
 

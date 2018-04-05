@@ -57,4 +57,4 @@ incindiary-hedgehog-grafana-76484-xdt4g   1/1       Running   0          1m
 If the pod is running, the Grafana server can be accessed via port-forwarding using the command
 `kubectl --namespace grafana port-forward incindiary-hedgehog-grafana-76484-xdt4g 3000` and opening the url `http://localhost:3000/` in your browser. 
 
-The [last step](grafana-dashboard) is configure the integration between Grafana and Prometheus.
+The [last step](grafana-dashboard) is to configure the integration between Grafana and Prometheus.

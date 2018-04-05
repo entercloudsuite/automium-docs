@@ -56,7 +56,7 @@ $ kubectl create -f rolebinding-tiller.yml
 rolebinding.rbac.authorization.k8s.io "tiller-binding" configured
 ```
 
-Now you are ready to init helm. Use the namespace grafana!
+Now you are ready to init helm. Be sure to use the namespace "grafana"!
 
 ```
 helm init --service-account tiller --tiller-namespace grafana
