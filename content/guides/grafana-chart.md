@@ -8,7 +8,7 @@ date: "05/04/2018"
 
 A Chart is a Helm package. Grafana is one of the stable chart available in the official Repository.
 
-In Helm, a Release is an instance of a chart running in a Kubernetes cluster. Charts have default configurations that sometimes require a persistent logic via [PersistentVolumeClaim]() and [StorageClass]().
+In Helm, a Release is an instance of a chart running in a Kubernetes cluster. Charts have default configurations that sometimes require a persistent logic via [PersistentVolumeClaim](https://kubernetes.io/docs/concepts/storage/persistent-volumes/) and [StorageClass](https://kubernetes.io/docs/concepts/storage/storage-classes/).
 
 Grafana chart require by default a storage volume to persist configuration and dashboards. So, you have to define a StorageClass to use the Enter Cloud Suite storage service (OpenStack Cinder):
 
@@ -57,4 +57,4 @@ incindiary-hedgehog-grafana-76484-xdt4g   1/1       Running   0          1m
 If the pod is running, the Grafana server can be accessed via port-forwarding using the command
 `kubectl --namespace grafana port-forward incindiary-hedgehog-grafana-76484-xdt4g 3000` and opening the url `http://localhost:3000/` in your browser. 
 
-Thanks for following this guide, now you have all the components to understand what's happening in your infrastructure!
+The [last step](grafana-dashboard) is configure the integration between Grafana and Prometheus.

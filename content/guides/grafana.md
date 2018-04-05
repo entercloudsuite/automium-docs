@@ -19,7 +19,7 @@ $ kubectl create namespace grafana
 namespace "grafana" created
 ```
 
-Define a [Role](kubernetes-role) in a new yaml file: **role-grafana.yml**. The role define a **grafana-manager** with full grants on the namespace:
+Define a [Role](https://kubernetes.io/docs/admin/authorization/rbac/#role-and-clusterrole) in a new yaml file: **role-grafana.yml**. The role define a **grafana-manager** with full grants on the namespace:
 
 ```yaml
 kind: Role
@@ -35,7 +35,7 @@ rules:
 
 Apply the role with the command `kubectl create -f role-grafana.yml`.
 
-Now you need to bind the new role to the [Group](kubernetes-group) grafana:
+Now you need to bind the new role to the [Group](https://kubernetes.io/docs/admin/authorization/rbac/#rolebinding-and-clusterrolebinding) "grafana":
 
 rolebinding-grafana.yml
 ```yaml

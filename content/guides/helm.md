@@ -6,7 +6,7 @@ cover: ""
 date: "05/04/2018"
 ---
 
-[Helm]() is a package manager for Kubernetes. Helm makes incredibly easy to deploy and upgrade application packages. **Tiller** is the Helm server component that runs in Kubernetes and handles the Helm packages.
+[Helm](https://www.helm.sh/) is a package manager for Kubernetes. Helm makes incredibly easy to deploy and upgrade application packages. **Tiller** is the Helm server component that runs in Kubernetes and handles the Helm packages.
 
 Before we can use Helm, you need to install Tiller with the following steps.
 
