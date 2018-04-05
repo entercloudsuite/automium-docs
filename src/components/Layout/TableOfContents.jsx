@@ -32,9 +32,6 @@ class TableOfContents extends React.Component {
       }
     })
 
-    postNodeChapters.forEach(chapter => {
-      chapter.sort((a, b) => a.lessonNumber > b.lessonNumber)
-    })
     return postNodeChapters
   }
 

@@ -104,7 +104,9 @@ const ToCContainer = styled.div`
 /* eslint no-undef: "off"*/
 export const pageQuery = graphql`
   query ConceptBySlug($slug: String!) {
-    allPostTitles: allMarkdownRemark{
+    allPostTitles: allMarkdownRemark(
+      sort: { order: ASC, fields: [frontmatter___chapter,frontmatter___lesson] }
+    ){
         edges {
           node {
             frontmatter {

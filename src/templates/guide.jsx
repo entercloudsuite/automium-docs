@@ -9,7 +9,7 @@ import TableOfContents from "../components/Layout/TableOfContents";
 
 export default class GuideTemplate extends React.Component {
   render() {
-    const chapters = ["", "GETTING STARTED", "MONITORING"]
+    const chapters = ["", "GETTING STARTED", "MONITORING", "ANALYTICS"]
     const { slug } = this.props.pathContext;
     const postNode = this.props.data.postBySlug;
     const post = postNode.frontmatter;
@@ -104,7 +104,9 @@ const ToCContainer = styled.div`
 /* eslint no-undef: "off"*/
 export const pageQuery = graphql`
   query GuidesBySlug($slug: String!) {
-    allPostTitles: allMarkdownRemark{
+    allPostTitles: allMarkdownRemark(
+      sort: { order: ASC, fields: [frontmatter___chapter,frontmatter___lesson] }
+    ){
         edges {
           node {
             frontmatter {
