@@ -1,6 +1,6 @@
 ## Automium Docs
 
-Work in progress...
+Work in progress.
 
 ![mind map](map.png)
 
