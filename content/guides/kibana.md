@@ -1,17 +1,21 @@
 ---
-title: "Helm"
-lesson: 9
-chapter: 2
+title: "Kibana"
+lesson: 4
+chapter: 4
 cover: ""
-date: "05/04/2018"
+date: "28/04/2018"
 ---
 
-[Helm](https://www.helm.sh/) is a package manager for Kubernetes. Helm makes incredibly easy to deploy and upgrade application packages. **Tiller** is the Helm server component that runs on Kubernetes and handles the Helm packages.
+Kibana is the official Dashboard of Elasticsearch. You have to setup it somewhere in your infrastructure. The best place is, of course, your Kubernetes cluster.
+
+To deploy applications in Kubernetes the suggested way is to go with [Helm](https://www.helm.sh/). Helm makes incredibly easy to deploy and upgrade application packages. **Tiller** is the Helm server component that runs on Kubernetes and handles the Helm packages.
 
 Before we can use Helm, you need to install Tiller with the following steps.
 
 ```
-$ kubectl create serviceaccount tiller --namespace grafana
+$ kubectl create namespace kibana
+...
+$ kubectl create serviceaccount tiller --namespace kibana
 serviceaccount "tiller" created
 ```
 
@@ -23,7 +27,7 @@ kind: Role
 apiVersion: rbac.authorization.k8s.io/v1beta1
 metadata:
   name: tiller-manager
-  namespace: grafana
+  namespace: kibana
 rules:
 - apiGroups: ["", "extensions", "apps"]
   resources: ["*"]
@@ -36,11 +40,11 @@ kind: RoleBinding
 apiVersion: rbac.authorization.k8s.io/v1beta1
 metadata:
   name: tiller-binding
-  namespace: grafana
+  namespace: kibana
 subjects:
 - kind: ServiceAccount
   name: tiller
-  namespace: grafana
+  namespace: kibana
 roleRef:
   kind: Role
   name: tiller-manager
@@ -56,7 +60,7 @@ $ kubectl create -f rolebinding-tiller.yml
 rolebinding.rbac.authorization.k8s.io "tiller-binding" configured
 ```
 
-Now you are ready to init helm. Be sure to use the namespace "grafana"!
+Now you are ready to init helm. Be sure to use the namespace "kibana"!
 
 ```
 helm init --service-account tiller --tiller-namespace grafana
@@ -66,4 +70,4 @@ Tiller (the Helm server-side component) has been installed into your Kubernetes 
 Happy Helming!
 ```
 
-In the [next step](grafana-chart) we are going to deploy Grafana.
+In the [next step](kibana-chart) we are going to deploy Kibana.
